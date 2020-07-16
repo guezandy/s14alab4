@@ -5,7 +5,7 @@ from os import environ
 
 load_dotenv(".env")
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = environ.get("SQLALCHEMY_DATABASE_URI")
+app.config["SQLALCHEMY_DATABASE_URI"] = environ.get("DATABASE_URL")
 
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = environ.get(
     "SQLALCHEMY_TRACK_MODIFICATIONS"
